@@ -16,7 +16,7 @@ public class Main {
 
             driver.get("https://www.instagram.com");
 
-            System.out.println("Google opened.");
+            System.out.println("Instagram opened.");
             System.out.println("Title: " + driver.getTitle());
 
             Thread.sleep(30000);
