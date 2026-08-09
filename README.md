@@ -1,45 +1,50 @@
 # JAVA-SELENIUM
 
-A Java + Selenium automation project exploring the possibility of automatically managing Instagram watch history through browser automation.
+A Java + Selenium automation project focused on exploring browser-based automation for Instagram activity and history management.
+
+---
 
 ## 📌 About the Project
 
-Instagram currently does not provide a direct, built-in way to automatically remove 
-WATCH HISTORY
-LIKE HISTORY
-COMMENT HISTORY
-.
-.
-.
+Instagram does not provide a direct built-in feature that allows users to automatically manage certain activity histories through a user-created script or public API.
 
-through a user-created script or API.
+This project was created to explore whether some of these processes could be automated through **Java + Selenium browser automation**.
 
-Because of this limitation, I started experimenting with **Java Selenium** to see whether the process could be automated through browser interaction.
+The current areas of experimentation include:
 
-The purpose of this project is primarily **learning, experimentation, and automation research**.
+* **Watch History**
+* **Like History**
+* **Comment History**
+* Other Instagram activity-management workflows
+
+The primary purpose of this project is **learning, experimentation, and automation research**.
 
 ---
 
 ## 🚀 Features
 
-* Browser automation using **Selenium WebDriver**
-* Written in **Java**
-* Attempts to automate interactions with Instagram
-* Exploration of automated watch-history management
-* Automatic compilation and execution using `run.bat`
-* Simple project structure for further Selenium automation experiments
+* 🌐 Browser automation using **Selenium WebDriver**
+* ☕ Written in **Java**
+* 🤖 Automated interaction with Instagram through a web browser
+* 🔍 Exploration of automated Instagram activity management
+* ⚙️ Automatic compilation and execution using `run.bat`
+* 🧪 Experimental Selenium automation workflows
+* 📁 Simple project structure for adding future experiments
 
-> ⚠️ Features are still under development and may change as the project progresses.
+> ⚠️ **Note:** Features are currently under development and may change as the project progresses.
 
 ---
 
 ## 🛠️ Technologies Used
 
-* **Java**
-* **Selenium WebDriver**
-* **Google Chrome**
-* **ChromeDriver / Selenium Manager**
-* **Batch scripting (`.bat`)**
+| Technology                          | Purpose                             |
+| ----------------------------------- | ----------------------------------- |
+| **Java**                            | Main programming language           |
+| **Selenium WebDriver**              | Browser automation                  |
+| **Google Chrome**                   | Browser used for automation         |
+| **ChromeDriver / Selenium Manager** | Browser control                     |
+| **Maven**                           | Project and dependency management   |
+| **Windows Batch (`.bat`)**          | Automatic compilation and execution |
 
 ---
 
@@ -47,17 +52,32 @@ The purpose of this project is primarily **learning, experimentation, and automa
 
 ### ChatGPT & Claude
 
-During the initial stages of the project, I used **ChatGPT** and **Claude** to help create and configure the development environment and get the initial Selenium setup working.
+During the initial stages of this project, **ChatGPT** and **Claude** were used as development assistants.
 
-They were mainly used as development assistance during the early stages of the project.
+They helped with:
+
+* Initial Java/Selenium environment setup
+* Understanding Selenium concepts
+* Debugging compilation issues
+* Developing initial automation workflows
+* Improving project structure
+
+They were primarily used as development assistance while learning and experimenting with Selenium.
 
 ### Selenium Reference PDF
 
 A **Selenium reference PDF** is included in this repository.
 
-I used this PDF as a reference while learning Selenium concepts, WebDriver functionality, browser interaction, and automation techniques.
+It was used as a learning resource while exploring:
 
-The PDF is located inside the repository folder.
+* Selenium WebDriver
+* Browser interaction
+* Element selection
+* XPath
+* Web automation
+* Selenium APIs
+
+The PDF is located within the repository.
 
 ---
 
@@ -65,9 +85,9 @@ The PDF is located inside the repository folder.
 
 ### 1. Install Java
 
-Install the Java Development Kit (JDK).
+Install the **Java Development Kit (JDK)**.
 
-Verify your installation:
+Verify the installation:
 
 ```bash
 java -version
@@ -77,37 +97,51 @@ java -version
 javac -version
 ```
 
-### 2. Clone the Repository
+---
+
+### 2. Install Google Chrome
+
+Install **Google Chrome** on your system.
+
+The project uses Chrome as the browser controlled by Selenium.
+
+---
+
+### 3. Clone the Repository
+
+Clone the repository using Git:
 
 ```bash
 git clone https://github.com/gochalamvinod/JAVA-SELENIUM.git
 ```
 
-Enter the project directory:
+Navigate into the project:
 
 ```bash
 cd JAVA-SELENIUM
 ```
 
-### 3. Configure Selenium
+---
 
-Make sure the required Selenium dependencies are available to the project.
+### 4. Configure the Project
 
-Depending on the project configuration, Selenium may require the appropriate browser setup.
+If the project uses Maven, make sure Maven is installed and available on your system.
 
-### 4. Install Google Chrome
+Verify Maven:
 
-Make sure Google Chrome is installed on your system.
+```bash
+mvn -version
+```
 
-The project uses Selenium to control the browser.
+Maven will automatically download the required dependencies defined in `pom.xml`.
 
 ---
 
 ## ▶️ Running the Project
 
-A `run.bat` file is included in the repository to simplify the process of compiling and running the Java code.
+A `run.bat` file is included to simplify compiling and running the Java program.
 
-Instead of manually compiling and executing the Java files, simply run:
+Instead of manually compiling the project, you can run:
 
 ```text
 run.bat
@@ -117,42 +151,58 @@ run.bat
 
 You can either:
 
-* Double-click `run.bat`
+**Option 1 — Double-click**
 
-or run it from PowerShell:
+Open the project folder and double-click:
+
+```text
+run.bat
+```
+
+**Option 2 — PowerShell**
+
+Run:
 
 ```powershell
 .\run.bat
 ```
 
-The batch file automatically:
+The batch file automatically handles the project build and execution.
 
-1. Compiles the required Java source files.
-2. Runs the compiled Java program.
+### What `run.bat` Does
 
-This makes it easier to start the project without manually entering the Java compilation and execution commands.
+The script is intended to:
+
+1. Build the Java project.
+2. Compile the source code.
+3. Resolve required Maven dependencies.
+4. Run the compiled Java application.
+
+This provides a convenient way to start the project without manually entering the build and execution commands.
 
 ---
 
 ## 🔬 Project Status
 
-**Status: Experimental / Under Development**
+**Status: 🧪 Experimental / Under Development**
 
 This project is currently an experiment to understand what can and cannot be automated through Selenium when interacting with Instagram.
 
-The project may change significantly as development and testing continue.
+The implementation is still evolving, and functionality may change as new experiments are added.
 
-**More updates coming soon @Thinking**
+> **More updates coming soon. @Thinking**
 
 ---
 
 ## ⚠️ Disclaimer
 
-This project is provided for **educational and research purposes**.
+This project is provided **for educational and research purposes only**.
 
-It is not affiliated with, endorsed by, or officially supported by Instagram or Meta.
+It is **not affiliated with, endorsed by, or officially supported by Instagram or Meta**.
 
-Automating interactions with third-party websites may be restricted by their terms of service. Users are responsible for understanding and complying with the applicable rules and policies of the services they interact with.
+Automating interactions with third-party websites may be restricted by their terms of service, policies, or technical limitations.
+
+Users are responsible for understanding and complying with the applicable rules and policies of the services they interact with.
 
 Use this project responsibly and only with accounts and environments that you are authorized to automate.
 
@@ -160,40 +210,53 @@ Use this project responsibly and only with accounts and environments that you ar
 
 ## 🎯 Learning Objectives
 
-The primary objectives of this project are to learn and experiment with:
+The main purpose of this project is to learn and experiment with:
 
-* Java programming
-* Selenium WebDriver
-* Browser automation
-* Web interaction
-* Automation workflows
-* Java compilation and execution
-* Windows batch scripting
-* Debugging Selenium applications
-* Understanding the limitations of browser-based automation
+* ☕ Java programming
+* 🌐 Selenium WebDriver
+* 🤖 Browser automation
+* 🔎 XPath and element selection
+* 🖱️ Web interaction
+* 🔄 Automation workflows
+* 📦 Maven project management
+* 🛠️ Java compilation and execution
+* 🪟 Windows batch scripting
+* 🐛 Debugging Selenium applications
+* 🔬 Understanding the limitations of browser-based automation
 
 ---
 
 ## 🙏 Acknowledgements
 
 * **Selenium** — Browser automation framework
-* **ChatGPT** — Assistance during the initial environment setup and development
-* **Claude** — Assistance during the initial environment setup and development
-* **Selenium Reference PDF** — Included in this repository and used as a learning/reference resource
+* **ChatGPT** — Assistance with initial environment setup, Selenium concepts, debugging, and development
+* **Claude** — Assistance with initial environment setup, Selenium concepts, debugging, and development
+* **Selenium Reference PDF** — Learning and reference material included in this repository
 
 ---
 
 ## 🔮 Future Development
 
-Future development may include:
+Possible future improvements include:
 
 * Improved automation workflows
 * Better error handling
+* More reliable element detection
 * Cleaner project structure
-* More Selenium experiments
+* Additional Selenium experiments
 * Improved browser interaction
-* More reliable automation
+* More robust automation
 * Additional documentation
-* Further investigation into automated watch-history management
+* Further investigation into automated Instagram activity management
 
-**More coming soon.**
+---
+
+## 📌 Project Philosophy
+
+This repository is primarily a **learning and experimentation project**.
+
+The goal is not only to build automation, but also to understand:
+
+> **What can be automated, how it can be automated, and where browser automation reaches its limitations.**
+
+**More coming soon. 🚀**
