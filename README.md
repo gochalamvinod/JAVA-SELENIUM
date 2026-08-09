@@ -4,7 +4,15 @@ A Java + Selenium automation project exploring the possibility of automatically 
 
 ## 📌 About the Project
 
-Instagram currently does not provide a direct, built-in way to automatically remove watch history,Like history, comment history through a user-created script or API.
+Instagram currently does not provide a direct, built-in way to automatically remove 
+WATCH HISTORY
+LIKE HISTORY
+COMMENT HISTORY
+.
+.
+.
+
+through a user-created script or API.
 
 Because of this limitation, I started experimenting with **Java Selenium** to see whether the process could be automated through browser interaction.
 
