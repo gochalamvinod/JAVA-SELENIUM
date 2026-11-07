@@ -6,8 +6,22 @@ A Java + Selenium automation project focused on exploring browser-based automati
 
 ## 📦 Third-Party Code & Provenance
 
-- **`undetectedselenium/`**: This directory is a vendored third-party open-source library created by **bramar**, distributed under its own license (`undetectedselenium/LICENSE`). It is included as a vendored dependency and is **not my original work**.
-- **User-Authored Code**: The only code written by me in this repository is [`test-instagram/src/main/java/Main.java`](test-instagram/src/main/java/Main.java) (~127 lines). This script is a proof-of-concept experiment that utilizes hardcoded absolute XPaths and is brittle by design.
+- **`undetectedselenium/`**: This directory is a vendored third-party open-source library created by **bramar** ([bramar/undetected-chromedriver](https://github.com/bramar/undetected-chromedriver)), distributed under its own license (`undetectedselenium/LICENSE`). It is included as a vendored dependency and is **not my original work**.
+- **User-Authored Code**: The only code written by me in this repository is [`test-instagram/src/main/java/Main.java`](test-instagram/src/main/java/Main.java) (~127 lines). This script is an experimental proof-of-concept that utilizes hardcoded absolute XPaths and is brittle by design.
+
+---
+
+## 📚 Libraries & Dependencies Used
+
+Every dependency in this repository is documented below for complete transparency:
+
+| Library / Component | Version / Artifact | Purpose & Role |
+| :--- | :--- | :--- |
+| **`UndetectedSelenium`** | `me.bramar.undetectedselenium:UndetectedSelenium:1.2` | Vendored Java library by bramar that patches the ChromeDriver binary startup arguments to minimize automated bot-detection flags. |
+| **`Selenium WebDriver`** | `org.seleniumhq.selenium:selenium-java` | Core web browser automation framework providing `WebDriver`, `WebElement`, and locator strategies (`By.xpath`). |
+| **`Google Chrome & ChromeDriver`** | Latest matching version | Browser binary and driver process automated via Selenium. |
+| **`Maven Exec Plugin`** | `org.codehaus.mojo:exec-maven-plugin:3.6.3` | Facilitates direct execution of `Main` class via `mvn compile exec:java`. |
+| **Standard Java Runtime** | Java 17+ | Standard language runtime (`java.lang.Thread` for pause intervals, `java.lang.System` for console logs). |
 
 ---
 
@@ -34,7 +48,7 @@ The primary purpose of this project is **learning, experimentation, and automati
 * ☕ Written in **Java**
 * 🤖 Automated interaction with Instagram through a web browser
 * 🔍 Exploration of automated Instagram activity management
-* ⚙️ Automatic compilation and execution using `run.bat`
+* ⚙️ Relative `run.bat` script for simple execution on Windows
 * 🧪 Experimental Selenium automation workflows
 * 📁 Simple project structure for adding future experiments
 
@@ -42,24 +56,11 @@ The primary purpose of this project is **learning, experimentation, and automati
 
 ---
 
-## 🛠️ Technologies Used
-
-| Technology                          | Purpose                             |
-| ----------------------------------- | ----------------------------------- |
-| **Java**                            | Main programming language           |
-| **Selenium WebDriver**              | Browser automation                  |
-| **Google Chrome**                   | Browser used for automation         |
-| **ChromeDriver / Selenium Manager** | Browser control                     |
-| **Maven**                           | Project and dependency management   |
-| **Windows Batch (`.bat`)**          | Automatic compilation and execution |
-
----
-
 ## ⚙️ Setup
 
 ### 1. Install Java
 
-Install the **Java Development Kit (JDK)**.
+Install the **Java Development Kit (JDK 17+)**.
 
 Verify the installation:
 
@@ -100,7 +101,7 @@ Set-Location JAVA-SELENIUM
 
 ---
 
-### 4. Configure the Project
+### 4. Configure & Build
 
 Ensure Maven is installed and available on your system:
 
@@ -114,11 +115,17 @@ Maven will automatically download the required dependencies defined in `pom.xml`
 
 ## ▶️ Running the Project
 
-A `run.bat` file is included to simplify compiling and running the Java program on Windows.
+A location-independent `run.bat` file is included in the project root to compile and run the Java program on Windows.
 
 ### Windows (cmd / PowerShell)
 ```powershell
 .\run.bat
+```
+
+Or manually with Maven:
+```powershell
+Set-Location test-instagram
+mvn compile exec:java
 ```
 
 ---
